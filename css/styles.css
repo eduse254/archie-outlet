@@ -1,3 +1,32 @@
+/* Responsive improvements for mobile */
+@media(max-width: 800px) {
+	.container { padding: 10px; }
+	.hero { grid-template-columns: 1fr; gap: 16px; }
+	.hero-title { font-size: 2em; }
+	.hero-image { height: 180px; }
+	.features { flex-direction: column; gap: 12px; }
+	.products-grid { grid-template-columns: 1fr; gap: 18px; }
+	.main-grid { display: block; }
+	.left-panel { width: 100%; margin-bottom: 18px; }
+	.panel-card { margin-bottom: 12px; }
+	.card { padding: 8px; }
+	.image { height: 180px; }
+	.footer { padding: 12px 0; font-size: 0.98em; }
+	.section-header { flex-direction: column; gap: 8px; }
+	.testimonial-list { padding: 18px 8px !important; }
+}
+@media(max-width: 600px) {
+	.header-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+	.nav { display: none; }
+	.container { padding: 6px; }
+	.hero-title { font-size: 1.3em; }
+	.hero-image { height: 120px; }
+	.features { gap: 8px; }
+	.products-grid { gap: 10px; }
+	.card { font-size: 0.98em; }
+	.footer { font-size: 0.95em; }
+	.testimonial-list { font-size: 0.98em; }
+}
 
 :root{
   --bg:#ffffff; --muted:#6b7280; --text:#0f172a; --accent:#ff4da6; --accent-2:#ff8a66; --card:#fff; --radius:12px; --shadow:0 10px 30px rgba(16,24,40,0.08);
