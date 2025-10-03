@@ -104,20 +104,15 @@ Security Best Practices for Static Sites:
             94christabel@gmail.com
           </p>
           <form id="contactForm" class="contact-form">
-            <input id="cname" placeholder="Your name" required />
-            <input id="cphone" placeholder="Phone" required />
-            <textarea
-              id="cmessage"
-              placeholder="Message"
-              rows="5"
-              required
-            ></textarea>
-            <div>
-              <button type="submit" class="btn btn-primary">
-                Send Message
-              </button>
-            </div>
-          </form>
+            <form action="https://formspree.io/f/myznjalv" method="POST" class="contact-form">
+              <input name="name" placeholder="Your name" required />
+              <input name="phone" placeholder="Phone" required />
+              <input type="email" name="email" placeholder="Your email (optional)" />
+              <textarea name="message" placeholder="Message" rows="5" required></textarea>
+              <div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </form>
         </section>
       </main>
 
