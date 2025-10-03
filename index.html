@@ -66,6 +66,43 @@ Security Best Practices for Static Sites:
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </nav>
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            aria-label="Open menu"
+            style="display: none"
+          >
+            <span
+              style="
+                display: block;
+                width: 28px;
+                height: 3px;
+                background: #ff4da6;
+                margin: 6px 0;
+                border-radius: 2px;
+              "
+            ></span>
+            <span
+              style="
+                display: block;
+                width: 28px;
+                height: 3px;
+                background: #ff4da6;
+                margin: 6px 0;
+                border-radius: 2px;
+              "
+            ></span>
+            <span
+              style="
+                display: block;
+                width: 28px;
+                height: 3px;
+                background: #ff4da6;
+                margin: 6px 0;
+                border-radius: 2px;
+              "
+            ></span>
+          </button>
           <div class="actions">
             <div class="search">
               <input
@@ -264,5 +301,24 @@ Security Best Practices for Static Sites:
 
     <script src="js/products.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // Mobile nav toggle
+      const navToggle = document.getElementById("navToggle");
+      const nav = document.querySelector(".nav");
+      function checkNav() {
+        if (window.innerWidth <= 800) {
+          navToggle.style.display = "block";
+          nav.style.display = "none";
+        } else {
+          navToggle.style.display = "none";
+          nav.style.display = "flex";
+        }
+      }
+      checkNav();
+      window.addEventListener("resize", checkNav);
+      navToggle.addEventListener("click", function () {
+        nav.style.display = nav.style.display === "none" ? "flex" : "none";
+      });
+    </script>
   </body>
 </html>

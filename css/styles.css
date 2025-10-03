@@ -1,3 +1,26 @@
+.nav-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 8px;
+	display: none;
+}
+@media(max-width: 800px) {
+	.nav-toggle { display: block; }
+	.nav { display: none !important; }
+}
+@media(max-width: 600px) {
+	.testimonial-list {
+		padding: 8px 2px !important;
+		font-size: 0.95em;
+		box-shadow: none;
+		border-radius: 10px;
+	}
+	.testimonial {
+		padding-left: 10px !important;
+		font-size: 1em !important;
+	}
+}
 /* Responsive improvements for mobile */
 @media(max-width: 800px) {
 	.container { padding: 10px; }
