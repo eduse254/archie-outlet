@@ -1,0 +1,268 @@
+<!--
+Security Best Practices for Static Sites:
+1. Set HTTP headers: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Strict-Transport-Security.
+2. Sanitize user input server-side if you add backend processing.
+3. Prevent XSS: never insert unsanitized user input into the DOM.
+4. Use HTTPS for forms and hosting.
+5. Disable directory listing on your server.
+6. Keep dependencies up to date.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARCHIE'S OUTLET — Natural Liquid Soaps, Detergents, Kenya</title>
+    <meta
+      name="description"
+      content="ARCHIE'S OUTLET: Natural liquid soaps, detergents, and cleaning products for hand, body, laundry, and more. Made in Kenya."
+    />
+    <meta
+      name="keywords"
+      content="liquid soap, detergent, hand wash, body wash, cleaning products, Kenya, ARCHIE'S OUTLET"
+    />
+    <meta name="author" content="ARCHIE'S OUTLET" />
+    <meta
+      property="og:title"
+      content="ARCHIE'S OUTLET — Natural Liquid Soaps, Detergents, Kenya"
+    />
+    <meta
+      property="og:description"
+      content="Natural liquid soaps, detergents, and cleaning products for hand, body, laundry, and more. Made in Kenya."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/images/brand.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ARCHIE'S OUTLET — Natural Liquid Soaps, Detergents, Kenya"
+    />
+    <meta
+      name="twitter:description"
+      content="Natural liquid soaps, detergents, and cleaning products for hand, body, laundry, and more. Made in Kenya."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.com/images/brand.jpg"
+    />
+    <link rel="canonical" href="https://yourdomain.com/" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <header class="header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html">
+            <div class="logo">A</div>
+            <div class="title"><span class="pink">ARCHIE'S</span> OUTLET</div>
+          </a>
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="actions">
+            <div class="search">
+              <input
+                id="globalSearch"
+                placeholder="Search products, scents..."
+              />
+            </div>
+            <button id="cartBtnTop" class="cart-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="vertical-align: middle"
+              >
+                <path
+                  d="M6.5 16.5C7.05228 16.5 7.5 16.9477 7.5 17.5C7.5 18.0523 7.05228 18.5 6.5 18.5C5.94772 18.5 5.5 18.0523 5.5 17.5C5.5 16.9477 5.94772 16.5 6.5 16.5ZM15.5 16.5C16.0523 16.5 16.5 16.9477 16.5 17.5C16.5 18.0523 16.0523 18.5 15.5 18.5C14.9477 18.5 14.5 18.0523 14.5 17.5C14.5 16.9477 14.9477 16.5 15.5 16.5ZM3.5 4.5H18.5L17.1 13.09C17.0272 13.5377 16.6377 13.875 16.1857 13.875H7.31429C6.86228 13.875 6.47277 13.5377 6.4 13.09L5.5 7.5H18.5"
+                  stroke="#ff4da6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Cart <span id="badgeTop">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero container">
+          <div class="hero-left">
+            <h1 class="hero-title">Pure & Gentle Liquid Soap for Daily Care</h1>
+            <p class="hero-sub">
+              Plant-based cleansers, gentle ingredients, delightful scents. Safe
+              for skin and the planet.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="shop.html" id="ctaShop"
+                >Shop Now</a
+              >
+              <a class="btn btn-ghost" href="#features">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-right">
+            <img
+              class="hero-image"
+              src="https://images.unsplash.com/photo-1585238342020-2d4f0a9b5b11?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+              alt="soap bottles"
+            />
+          </div>
+        </section>
+
+        <section id="features" class="container features">
+          <div class="feature-card fade-in-up">
+            <h3>Natural Ingredients</h3>
+            <p class="muted">
+              Formulas crafted from plant-derived surfactants and essential
+              oils.
+            </p>
+          </div>
+          <div class="feature-card fade-in-up" style="animation-delay: 0.08s">
+            <h3>Sustainable Packaging</h3>
+            <p class="muted">
+              Recyclable bottles and refill options to reduce waste.
+            </p>
+          </div>
+          <div class="feature-card fade-in-up" style="animation-delay: 0.16s">
+            <h3>Locally Made</h3>
+            <p class="muted">Handmade batches supporting local artisans.</p>
+          </div>
+        </section>
+
+        <section class="container featured">
+          <div class="section-header">
+            <h2>Featured Products</h2>
+            <a href="shop.html" class="muted">See all</a>
+          </div>
+          <div id="featuredGrid" class="products-grid"></div>
+        </section>
+        <section
+          class="container testimonials"
+          style="margin: 48px auto 32px auto; max-width: 800px"
+        >
+          <div class="section-header" style="text-align: center">
+            <h2 style="margin-bottom: 18px">What Our Customers Say</h2>
+          </div>
+          <div
+            class="testimonial-list"
+            style="
+              background: #f8f9fa;
+              border-radius: 18px;
+              padding: 32px 24px;
+              box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+            "
+          >
+            <blockquote
+              class="testimonial"
+              style="
+                border-left: 4px solid #ff4da6;
+                padding-left: 18px;
+                margin: 0;
+              "
+            >
+              <p
+                style="
+                  font-size: 1.15em;
+                  line-height: 1.5;
+                  color: #333;
+                  font-style: italic;
+                "
+              >
+                “The multipurpose detergent is gentle on my hands and tough on
+                stains. I love that it’s eco-friendly!”
+              </p>
+              <footer style="margin-top: 8px; color: #888; font-size: 0.98em">
+                — Mary W., Nairobi
+              </footer>
+            </blockquote>
+            <blockquote
+              class="testimonial"
+              style="
+                border-left: 4px solid #ff4da6;
+                padding-left: 18px;
+                margin: 0;
+              "
+            >
+              <p
+                style="
+                  font-size: 1.15em;
+                  line-height: 1.5;
+                  color: #333;
+                  font-style: italic;
+                "
+              >
+                “Fast delivery and great customer service. The hand wash smells
+                amazing!”
+              </p>
+              <footer style="margin-top: 8px; color: #888; font-size: 0.98em">
+                — John K., Kisumu
+              </footer>
+            </blockquote>
+            <blockquote
+              class="testimonial"
+              style="
+                border-left: 4px solid #ff4da6;
+                padding-left: 18px;
+                margin: 0;
+              "
+            >
+              <p
+                style="
+                  font-size: 1.15em;
+                  line-height: 1.5;
+                  color: #333;
+                  font-style: italic;
+                "
+              >
+                “I switched to ARCHIE'S OUTLET for all my cleaning needs. Highly
+                recommended!”
+              </p>
+              <footer style="margin-top: 8px; color: #888; font-size: 0.98em">
+                — Grace M., Mombasa
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+      </main>
+
+      <footer class="container footer">
+        <div>
+          © <span id="year1"></span> ARCHIE'S OUTLET — Contact: +254 704 900918
+        </div>
+        <div class="muted">
+          Built with care • Replace dummy phone & images with your assets
+        </div>
+      </footer>
+    </div>
+
+    <!-- Cart slide shared across pages -->
+    <div id="cartSlide" class="cart-slide" aria-hidden="true">
+      <h3>Your Cart</h3>
+      <div id="cartItemsRoot" class="cart-items"></div>
+      <div class="cart-footer">
+        <div>Total: <strong id="cartTotalRoot">Ksh 0.00</strong></div>
+        <div class="cart-actions">
+          <button id="clearCartRoot" class="btn btn-ghost">Clear</button
+          ><button id="checkoutRoot" class="btn btn-primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

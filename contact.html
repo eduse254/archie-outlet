@@ -1,0 +1,134 @@
+<!--
+Security Best Practices for Static Sites:
+1. Set HTTP headers: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Strict-Transport-Security.
+2. Sanitize user input server-side if you add backend processing.
+3. Prevent XSS: never insert unsanitized user input into the DOM.
+4. Use HTTPS for forms and hosting.
+5. Disable directory listing on your server.
+6. Keep dependencies up to date.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact ARCHIE'S OUTLET — Natural Soaps, Detergents, Kenya</title>
+    <meta
+      name="description"
+      content="Contact ARCHIE'S OUTLET for natural liquid soaps, detergents, and cleaning products made in Kenya."
+    />
+    <meta
+      name="keywords"
+      content="contact, liquid soap, detergent, hand wash, body wash, cleaning products, Kenya, ARCHIE'S OUTLET"
+    />
+    <meta name="author" content="ARCHIE'S OUTLET" />
+    <meta
+      property="og:title"
+      content="Contact ARCHIE'S OUTLET — Natural Soaps, Detergents, Kenya"
+    />
+    <meta
+      property="og:description"
+      content="Contact ARCHIE'S OUTLET for natural liquid soaps, detergents, and cleaning products made in Kenya."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/contact.html" />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/images/brand.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Contact ARCHIE'S OUTLET — Natural Soaps, Detergents, Kenya"
+    />
+    <meta
+      name="twitter:description"
+      content="Contact ARCHIE'S OUTLET for natural liquid soaps, detergents, and cleaning products made in Kenya."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.com/images/brand.jpg"
+    />
+    <link rel="canonical" href="https://yourdomain.com/contact.html" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <header class="header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html">
+            <div class="logo">A</div>
+            <div class="title"><span class="pink">ARCHIE'S</span> OUTLET</div>
+          </a>
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="actions">
+            <div class="search">
+              <input
+                id="searchContact"
+                placeholder="Search products, scents..."
+              />
+            </div>
+            <button id="cartBtnContact" class="cart-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="vertical-align: middle"
+              >
+                <path
+                  d="M6.5 16.5C7.05228 16.5 7.5 16.9477 7.5 17.5C7.5 18.0523 7.05228 18.5 6.5 18.5C5.94772 18.5 5.5 18.0523 5.5 17.5C5.5 16.9477 5.94772 16.5 6.5 16.5ZM15.5 16.5C16.0523 16.5 16.5 16.9477 16.5 17.5C16.5 18.0523 16.0523 18.5 15.5 18.5C14.9477 18.5 14.5 18.0523 14.5 17.5C14.5 16.9477 14.9477 16.5 15.5 16.5ZM3.5 4.5H18.5L17.1 13.09C17.0272 13.5377 16.6377 13.875 16.1857 13.875H7.31429C6.86228 13.875 6.47277 13.5377 6.4 13.09L5.5 7.5H18.5"
+                  stroke="#ff4da6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Cart <span id="badgeContact">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <section style="padding: 28px 0">
+          <h1>Contact Us</h1>
+          <p class="muted">
+            Phone: +254 754 876202, +254 704 900918 • Email:
+            94christabel@gmail.com
+          </p>
+          <form id="contactForm" class="contact-form">
+            <input id="cname" placeholder="Your name" required />
+            <input id="cphone" placeholder="Phone" required />
+            <textarea
+              id="cmessage"
+              placeholder="Message"
+              rows="5"
+              required
+            ></textarea>
+            <div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="container footer fixed-bottom">
+        <div>
+          © <span id="year5"></span> ARCHIE'S OUTLET — Contact: +254 704 900918
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

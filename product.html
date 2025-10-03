@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARCHIE'S OUTLET — Product</title>
+    <meta name="description" content="Product details" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <header class="header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html">
+            <div class="logo">A</div>
+            <div class="title"><span class="pink">ARCHIE'S</span> OUTLET</div>
+          </a>
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="actions">
+            <div class="search">
+              <input
+                id="searchProduct"
+                placeholder="Search products, scents..."
+              />
+            </div>
+            <button id="cartBtnProd" class="cart-btn">
+              Cart <span id="badgeProd">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="container product-page">
+        <div id="productRoot" class="product-card"></div>
+      </main>
+
+      <footer class="container footer">
+        <div>
+          © <span id="year3"></span> ARCHIE'S OUTLET — Contact: +254 704 900918
+        </div>
+      </footer>
+    </div>
+
+    <div id="cartSlideProd" class="cart-slide" aria-hidden="true">
+      <h3>Your Cart</h3>
+      <div id="cartItemsProd" class="cart-items"></div>
+      <div class="cart-footer">
+        <div>Total: <strong id="cartTotalProd">Ksh 0.00</strong></div>
+        <div class="cart-actions">
+          <button id="clearCartProd" class="btn btn-ghost">Clear</button
+          ><button id="checkoutProd" class="btn btn-primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

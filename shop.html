@@ -1,0 +1,156 @@
+<!--
+Security Best Practices for Static Sites:
+1. Set HTTP headers: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Strict-Transport-Security.
+2. Sanitize user input server-side if you add backend processing.
+3. Prevent XSS: never insert unsanitized user input into the DOM.
+4. Use HTTPS for forms and hosting.
+5. Disable directory listing on your server.
+6. Keep dependencies up to date.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARCHIE'S OUTLET — Shop Liquid Soaps, Detergents, Kenya</title>
+    <meta
+      name="description"
+      content="Shop natural liquid soaps, detergents, and cleaning products for hand, body, laundry, and more. Made in Kenya."
+    />
+    <meta
+      name="keywords"
+      content="shop, liquid soap, detergent, hand wash, body wash, cleaning products, Kenya, ARCHIE'S OUTLET"
+    />
+    <meta name="author" content="ARCHIE'S OUTLET" />
+    <meta
+      property="og:title"
+      content="ARCHIE'S OUTLET — Shop Liquid Soaps, Detergents, Kenya"
+    />
+    <meta
+      property="og:description"
+      content="Shop natural liquid soaps, detergents, and cleaning products for hand, body, laundry, and more. Made in Kenya."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/shop.html" />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/images/brand.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ARCHIE'S OUTLET — Shop Liquid Soaps, Detergents, Kenya"
+    />
+    <meta
+      name="twitter:description"
+      content="Shop natural liquid soaps, detergents, and cleaning products for hand, body, laundry, and more. Made in Kenya."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.com/images/brand.jpg"
+    />
+    <link rel="canonical" href="https://yourdomain.com/shop.html" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <header class="header">
+        <div class="container header-inner">
+          <a class="brand" href="index.html">
+            <div class="logo">A</div>
+            <div class="title"><span class="pink">ARCHIE'S</span> OUTLET</div>
+          </a>
+          <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="actions">
+            <div class="search">
+              <input id="searchShop" placeholder="Search products, scents..." />
+            </div>
+            <button id="cartBtnShop" class="cart-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="vertical-align: middle"
+              >
+                <path
+                  d="M6.5 16.5C7.05228 16.5 7.5 16.9477 7.5 17.5C7.5 18.0523 7.05228 18.5 6.5 18.5C5.94772 18.5 5.5 18.0523 5.5 17.5C5.5 16.9477 5.94772 16.5 6.5 16.5ZM15.5 16.5C16.0523 16.5 16.5 16.9477 16.5 17.5C16.5 18.0523 16.0523 18.5 15.5 18.5C14.9477 18.5 14.5 18.0523 14.5 17.5C14.5 16.9477 14.9477 16.5 15.5 16.5ZM3.5 4.5H18.5L17.1 13.09C17.0272 13.5377 16.6377 13.875 16.1857 13.875H7.31429C6.86228 13.875 6.47277 13.5377 6.4 13.09L5.5 7.5H18.5"
+                  stroke="#ff4da6"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Cart <span id="badgeShop">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="container main-grid">
+        <aside class="left-panel">
+          <div class="panel-card">
+            <h4>Categories</h4>
+            <div id="filterCats"></div>
+          </div>
+          <div class="panel-card">
+            <h4>Price</h4>
+            <input
+              id="priceRange"
+              type="range"
+              min="0"
+              max="1000"
+              value="1000"
+            />
+            <div class="muted">Under Ksh<span id="priceValue"> 1000</span></div>
+          </div>
+          <div class="panel-card">
+            <h4>Sort By</h4>
+            <select id="sortBy">
+              <option value="default">Default</option>
+              <option value="priceLow">Price: Low to High</option>
+              <option value="priceHigh">Price: High to Low</option>
+              <option value="alpha">Alphabetical</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+        </aside>
+
+        <section class="shop-area">
+          <div class="section-header">
+            <h2>Shop</h2>
+            <div class="muted">Showing <span id="countShop">0</span></div>
+          </div>
+          <div id="productsGridAll" class="products-grid"></div>
+        </section>
+      </main>
+
+      <footer class="container footer">
+        <div>
+          © <span id="year2"></span> ARCHIE'S OUTLET — Contact: +254 704 900918
+        </div>
+      </footer>
+    </div>
+
+    <div id="cartSlideShop" class="cart-slide" aria-hidden="true">
+      <h3>Your Cart</h3>
+      <div id="cartItemsShop" class="cart-items"></div>
+      <div class="cart-footer">
+        <div>Total: <strong id="cartTotalShop">Ksh 0.00</strong></div>
+        <div class="cart-actions">
+          <button id="clearCartShop" class="btn btn-ghost">Clear</button
+          ><button id="checkoutShop" class="btn btn-primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
